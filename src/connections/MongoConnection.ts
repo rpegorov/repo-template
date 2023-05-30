@@ -4,7 +4,7 @@ import { MONGODB_URI } from "../utils/config.js";
 import * as process from "process";
 
 const AppDataSource = new DataSource({
-    url:MONGODB_URI,
+    url: process.env.MONGO_URI,
     type: "mongodb",
     host: "localhost",
     port: 27017,
