@@ -23,12 +23,12 @@ export default class BookController {
         req: FastifyRequest<{ Body: IBookPostBody }>,
         res: FastifyReply,
     ): Promise<void> {
-        const { title, author, description } = req.body;
+        const {author, title, description} = req.body;
         const book: IBook = {
             id: uuid4(),
-            title,
             author,
-            description,
+            title,
+            description
         };
 
         try {

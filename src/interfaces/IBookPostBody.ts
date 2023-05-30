@@ -1,6 +1,6 @@
 interface IBookPostBody {
-    title: string;
     author: string;
+    title: string;
     description: string;
 }
 
