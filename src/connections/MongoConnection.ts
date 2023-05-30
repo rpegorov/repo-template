@@ -1,6 +1,6 @@
 import { DataSource } from "typeorm";
 import { Book } from "../entities/Book.js";
-import { MONGODB_URI } from "../utils/config";
+import { MONGODB_URI } from "../utils/config.js";
 import * as process from "process";
 
 const AppDataSource = new DataSource({
