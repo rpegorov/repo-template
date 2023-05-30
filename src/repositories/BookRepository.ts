@@ -1,5 +1,5 @@
 import {IBook} from "../interfaces/IBook.js";
-import {AppDataSource} from "../connections/MongoConnection";
+import {AppDataSource} from "../connections/MongoConnection.js";
 import {Book} from "../entities/Book.js";
 import {InsertResult} from "typeorm";
 
