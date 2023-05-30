@@ -1,15 +1,16 @@
 import { DataSource } from "typeorm";
-import { Book } from "../entities/Book";
+import { Book } from "../entities/Book.js";
 import { MONGODB_URI } from "../utils/config";
+import * as process from "process";
 
 const AppDataSource = new DataSource({
     url:MONGODB_URI,
     type: "mongodb",
     host: "localhost",
     port: 27017,
-    database: "Books",
-    // username: "root",
-    // password: "password",
+    database: process.env.MONGO_DATABASE,
+    username: process.env.MONGO_USERNAME,
+    password: process.env.MONGO_PASSWORD,
     logging: true,
     synchronize: true,
     entities: [Book],
